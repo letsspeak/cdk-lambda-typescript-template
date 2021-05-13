@@ -9,7 +9,12 @@ export class CdkLambdaTypescriptTemplateStack extends cdk.Stack {
     super(scope, id, props);
 
     // create lambda function
-    const testFunc = new lambda.NodejsFunction(this, "test-func");
+//    const testFunc = new lambda.NodejsFunction(this, "test-func");
+
+    const testFunc = new lambda.NodejsFunction(this, 'TestFunction', {
+      entry: 'src/index.ts', // accepts .js, .jsx, .ts and .tsx files
+      handler: 'handler'
+    });
 
     // create Event Bridge Trigger to fire testFunc
     const rule = new events.Rule(this, 'Rule', {
