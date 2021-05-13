@@ -1,4 +1,10 @@
-# Welcome to your CDK TypeScript project!
+# cdk-labmda-typescript-template
+
+## **Important**
+
+Once you `cdk deploy` this template to your AWS Account, **the test lambda function will exec every 5 minutes automatically** until you `cdk destroy`. Be careful AWS charge.
+
+## Welcome to your CDK TypeScript project!
 
 This is a blank project for TypeScript development with CDK.
 
